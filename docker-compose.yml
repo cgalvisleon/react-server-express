@@ -5,6 +5,6 @@ services:
     build: .
     hostname: serve
     ports:
-      - 3000:3000
+      - 3000:80
     volumes:
       - './build:/usr/scr/build'
