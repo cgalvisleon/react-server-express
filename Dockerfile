@@ -13,4 +13,4 @@ COPY [".", "/usr/src/"]
 EXPOSE 3000
 
 # Production
-CMD ["npm", "dev"]
+CMD ["npm", "start"]
