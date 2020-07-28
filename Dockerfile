@@ -9,7 +9,6 @@ WORKDIR /usr/src
 RUN npm install
 
 COPY [".", "/usr/src/"]
-COPY ["../app/build", "/usr/src/build"]
 
 EXPOSE 3000
 

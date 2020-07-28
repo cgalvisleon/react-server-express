@@ -8,6 +8,10 @@
     "start": "NODE_ENV=production node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgalvisleon/react-server-express.git"
+  },
   "author": "cgalvisleon@gmail.com",
   "license": "MIT",
   "dependencies": {

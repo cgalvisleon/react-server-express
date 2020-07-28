@@ -1,12 +1,10 @@
-version: "3"
+version: '3'
 
 services:
   api:
     build: .
-    hostname: api
+    hostname: serve
     ports:
       - 3000:3000
-    environment:
-      - PG_HOST=localhost
     volumes:
-      - ".:/usr/scr"
+      - '../app/build:/usr/scr/build'
