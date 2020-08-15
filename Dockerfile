@@ -4,11 +4,11 @@ FROM node:12-alpine
 
 COPY ["package.json", "package-lock.json", "/usr/src/"]
 
-WORKDIR /usr/src
+WORKDIR /home/node/app
 
 RUN npm install
 
-COPY [".", "/usr/src/"]
+COPY [".", "/home/node/app"]
 
 EXPOSE 3000
 
