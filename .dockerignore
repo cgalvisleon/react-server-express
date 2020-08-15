@@ -2,7 +2,6 @@
 .git
 .dockerignore
 .gitignore
-build/*
 Dockerfile
 nod_modules
 npm-debug.log*
