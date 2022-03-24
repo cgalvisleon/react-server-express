@@ -14,7 +14,7 @@ Is an express server from deploy react.js in server node.js
 - docker run -d --rm --name server-demo -p 3000:3000 -v ./app:/home/node/app/build cgalvisleon/josephine:server
 
 - docker build -t react-server-express .
-- docker tag server cgalvisleon/josephine:react-server-express
+- docker tag react-server-express cgalvisleon/josephine:react-server-express
 - docker push cgalvisleon/josephine:react-server-express
 - docker run -d --rm --name server-demo -p 3000:3000 cgalvisleon/josephine:react-server-express
 - docker run -d --rm --name server-demo -p 3000:3000 -v $PDW/app:/home/node/app/build cgalvisleon/josephine:react-server-express
