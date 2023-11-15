@@ -1,6 +1,6 @@
 {
   "name": "serve",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Server expres for deploy react.js",
   "main": "index.js",
   "scripts": {
