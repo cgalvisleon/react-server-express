@@ -6,12 +6,12 @@ const fs = require("fs");
 // Body parser limit
 app.use(express.json({ limit: "100mb" }));
 
-let _path = "build";
+let _path = "webapp";
 if (!fs.existsSync(_path)) {
   _path = "dist";
 }
 if (!fs.existsSync(_path)) {
-  _path = "webapp";
+  _path = "build";
 }
 
 app.use(express.static(path.join(__dirname, _path)));
