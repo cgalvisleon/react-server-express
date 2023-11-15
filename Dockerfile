@@ -1,5 +1,3 @@
-# Josephine server
-# version 1.0.0
 FROM node:12-alpine
 COPY ["package.json", "package-lock.json", "/usr/src/"]
 WORKDIR /usr/src

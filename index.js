@@ -1,15 +1,22 @@
-require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
-const route = process.env.PATH || "build";
+const fs = require("fs");
 
 // Body parser limit
 app.use(express.json({ limit: "100mb" }));
 
-app.use(express.static(path.join(__dirname, route)));
+let _path = "build";
+if (!fs.existsSync(_path)) {
+  _path = "dist";
+}
+if (!fs.existsSync(_path)) {
+  _path = "webapp";
+}
+
+app.use(express.static(path.join(__dirname, _path)));
 
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, route, "index.html"));
+  res.sendFile(path.join(__dirname, _path, "index.html"));
 });
 app.listen(3000);
