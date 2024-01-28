@@ -29,7 +29,16 @@ docker push cgalvisleon/react-server-express:1.0.5
 
 ```
 
-### Build Arm64
+### Build amd64
+
+```
+docker build -t react-server-arm -f ./Dockerfile .
+docker build --platform linux/amd64 --no-cache -t react-server-arm -f ./Dockerfile .
+docker tag react-server-arm cgalvisleon/react-server-amd
+docker push cgalvisleon/react-server-amd
+```
+
+### Build arm64
 
 ```
 docker build -t react-server-arm -f ./Dockerfile .
