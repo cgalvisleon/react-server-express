@@ -15,7 +15,6 @@ if (!fs.existsSync(_path)) {
 }
 
 app.use(express.static(path.join(__dirname, _path)));
-
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, _path, "index.html"));
 });

@@ -28,3 +28,12 @@ docker push cgalvisleon/react-server-express:1.0.5
 - docker run -d --rm --name server-demo -p 3000:3000 -v ./app:/home/node/app/build cgalvisleon/josephine:react-server-express
 
 ```
+
+### Build Arm64
+
+```
+docker build -t react-server-arm -f ./Dockerfile .
+docker build --platform linux/arm64 --no-cache -t react-server-arm -f ./Dockerfile .
+docker tag react-server-arm cgalvisleon/react-server-arm
+docker push cgalvisleon/react-server-arm
+```
