@@ -5,7 +5,7 @@ Is an express server from deploy react.js in server node.js
 ### Docker Hub
 
 ```
-git tag v1.0.5 &&
+git tag v1.0.6 &&
 git tags
 
 npm version -f 1.0.5

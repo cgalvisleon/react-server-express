@@ -2,7 +2,6 @@
 
 HELP=false
 BUILD=false
-TEST=false
 BRANCH=$(git branch --show-current)                              # Valor para validar el namespace
 IMAGE="cgalvisleon/react-server-express"                               # Valor $IMAGE
 VERSION=$(git describe --tags --abbrev=0)                        # Valor para reemplazar $VERSION obtenido de Git
@@ -47,12 +46,16 @@ build_image() {
   fi
 }
 
-if [ "$BUILD" = true ]; then
-  build_image "linux/amd64,linux/arm64" "$IMAGE_VERSION" "./Dockerfile" true
-else
+help() {
   echo "Uso: deploy.sh [opciones]"
   echo "Opciones:"
   echo "  --h, --help: Muestra este mensaje de ayuda."
   echo "  --b, --build: Construye la imagen de Docker y la sube al registro de contenedores."
   exit 0
+}
+
+if [ "$BUILD" = true ]; then
+  build_image "linux/amd64,linux/arm64" "$IMAGE_VERSION" "./Dockerfile" true
+else
+  help
 fi
